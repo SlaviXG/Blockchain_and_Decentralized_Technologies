@@ -1,11 +1,12 @@
 import hexIntConverter
 
-
 val = input("\ni.\tValue: ")
-print("ii.\tNumber of bytes: ", (len(val)-2)//2)
-print("iii.Little-endian:	", hexIntConverter.hex_to_little_endian(val))
-print("iv.\tBig-endian: ", hexIntConverter.hex_to_big_endian(val))
-
+if(hexIntConverter.stringIsHexVal(val)):
+    print("ii.\tNumber of bytes: ", hexIntConverter.countNumberOfBytes(val))
+    print("iii.Little-endian:	", hexIntConverter.hex_to_little_endian(val))
+    print("iv.\tBig-endian: ", hexIntConverter.hex_to_big_endian(val))
+else:
+    print("Incorrect hex value.")
 
 
 ### Testing functions :
