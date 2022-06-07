@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+M:/Programs/GitHub Rep/Blockchain-and-Decentralized-Technologies/Practice 3/main.cpp
+iostream
+-
+string
+-
+sstream
+-
+cstring
+-
+iomanip
+-
+
