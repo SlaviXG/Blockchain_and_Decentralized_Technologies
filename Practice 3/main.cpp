@@ -141,5 +141,9 @@ int main()
     print_case("abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq");
     print_case("0");
 
+    print_case("Hash");
+    print_case("hash");
+    print_case("abacaba");
+
     return 0;
 }
