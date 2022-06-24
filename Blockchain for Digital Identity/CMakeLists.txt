@@ -3,4 +3,4 @@ project(Blockchain_for_Digital_Identity)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Blockchain_for_Digital_Identity main.cpp KeyPair.cpp KeyPair.h)
+add_executable(Blockchain_for_Digital_Identity main.cpp KeyPair.cpp KeyPair.h Signature.cpp Signature.h)

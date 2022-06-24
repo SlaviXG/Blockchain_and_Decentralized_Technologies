@@ -1,0 +1,10 @@
+#ifndef BLOCKCHAIN_FOR_DIGITAL_IDENTITY_SIGNATURE_H
+#define BLOCKCHAIN_FOR_DIGITAL_IDENTITY_SIGNATURE_H
+
+
+class Signature {
+
+};
+
+
+#endif
