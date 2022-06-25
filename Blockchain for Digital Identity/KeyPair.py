@@ -1,6 +1,8 @@
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.asymmetric import padding
 
 class keyPair:
 
@@ -27,7 +29,12 @@ class keyPair:
     def printKey(self):
         print(self.priKStr)
         print(self.pubKStr, '\n')
-        with open('private_key.pem', 'wb') as f:
+        with open('keys/private_key.pem', 'wb') as f:
             f.write(self.priKStr)
-        with open('public_key.pem', 'wb') as f:
+        with open('keys/public_key.pem', 'wb') as f:
             f.write(self.pubKStr)
+
+
+# Used these examples :
+# https://nitratine.net/blog/post/asymmetric-encryption-and-decryption-in-python/
+#
