@@ -34,6 +34,6 @@ class KeyPair:
             f.write(self.pubKStr)
 
 
-# Used these examples :
+# Used these trusted examples :
 # https://nitratine.net/blog/post/asymmetric-encryption-and-decryption-in-python/
 #
