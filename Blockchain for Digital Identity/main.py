@@ -1,4 +1,4 @@
-﻿from KeyPair import keyPair
+﻿from Signature import *
 
-x = keyPair()
+x = KeyPair()
 x.printKey()
