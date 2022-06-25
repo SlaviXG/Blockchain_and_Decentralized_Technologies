@@ -36,4 +36,5 @@ class KeyPair:
 
 # Used these trusted examples :
 # https://nitratine.net/blog/post/asymmetric-encryption-and-decryption-in-python/
-#
+# https://cryptography.io/en/latest/
+# https://cryptography.io/en/latest/hazmat/primitives/asymmetric/rsa/

@@ -5,6 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KeyPair.py" beforeDir="false" afterPath="$PROJECT_DIR$/KeyPair.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Signature.py" beforeDir="false" afterPath="$PROJECT_DIR$/Signature.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keys/private_key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/keys/private_key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keys/public_key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/keys/public_key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
