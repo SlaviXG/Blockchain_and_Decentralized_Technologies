@@ -1,7 +1,7 @@
 ﻿from Signature import *
 
 x = KeyPair()
-x.printKey()
+x.printKeyPair()
 
 sig = Signature()
 enc = sig.signData(x.privateKey, b"abacaba")

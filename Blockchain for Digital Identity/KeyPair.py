@@ -25,7 +25,7 @@ class KeyPair:
         )
         self.publicKey = self.privateKey.public_key()
 
-    def printKey(self):
+    def printKeyPair(self):
         print(self.priKStr)
         print(self.pubKStr, '\n')
         with open('keys/private_key.pem', 'wb') as f:
