@@ -1,12 +1,17 @@
 ﻿from Signature import *
 
-x = KeyPair()
-x.printKeyPair()
+from Account import *
 
-sig = Signature()
-enc = sig.signData(x.privateKey, b"abacaba")
+#x = KeyPair()
+#x.printKeyPair()
 
-print(sig.verifySignature(enc, b"abacabb", x.publicKey))
-print(sig.verifySignature(enc, b"abacaba", x.publicKey))
+#sig = Signature()
+#enc = sig.signData(x.privateKey, b"abacaba")
 
-sig.printSignature()
+#print(sig.verifySignature(enc, b"abacabb", x.publicKey))
+#print(sig.verifySignature(enc, b"abacaba", x.publicKey))
+
+#sig.printSignature()
+
+firstOne = Account("Tim")
+print(firstOne.toString())

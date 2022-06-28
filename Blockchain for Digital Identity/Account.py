@@ -5,7 +5,7 @@ from Signature import Signature
 class Account:
 
     # Constructor
-    def __init__(self, name):
+    def __init__(self, name: str):
         # Identifier = SHA-1 hash
         self.ID = None
         # Key Pair (wallet)
@@ -13,9 +13,12 @@ class Account:
         # Name
         self.name = name
 
+    def __str__(self):
+        pass
+    
     # returns the string with the account object
     def toString(self):
-        pass
+        return str(self)
 
     # Prints the Key Pair
     def printKeyPair(self):
