@@ -6,16 +6,22 @@ class Account:
 
     # Constructor
     def __init__(self, name: str):
-        # Identifier = SHA-1 hash
-        self.ID = None
         # Key Pair (wallet)
         self.key_pair = KeyPair()
         # Name
         self.name = name
+        # Identifier = SHA-1 hash
+        self.ID = None
 
-    def __str__(self):
+    def createOperation(self):
         pass
-    
+
+    def signData(self):
+        pass
+
+    #def __str__(self):
+    #    pass
+
     # returns the string with the account object
     def toString(self):
         return str(self)
@@ -26,7 +32,14 @@ class Account:
 
 
 class Identity(Account):
-    pass
+
+    def __init__(self, name):
+        super(Identity, self).__init__(name)
+        self.type = "Identity"
+
 
 class Organization(Account):
-    pass
+
+    def __init__(self, name):
+        super(Organization, self).__init__(name)
+        self.type = "Organization"

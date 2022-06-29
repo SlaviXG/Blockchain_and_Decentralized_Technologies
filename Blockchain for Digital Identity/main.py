@@ -15,3 +15,4 @@ from Account import *
 
 firstOne = Account("Tim")
 print(firstOne.toString())
+print(firstOne.name)
