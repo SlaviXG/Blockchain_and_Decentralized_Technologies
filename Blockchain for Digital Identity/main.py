@@ -13,6 +13,7 @@ from Account import *
 
 #sig.printSignature()
 
-firstOne = Account("Tim")
+firstOne = Identity("Tim")
 print(firstOne.toString())
 print(firstOne.name)
+print(firstOne.ID)
