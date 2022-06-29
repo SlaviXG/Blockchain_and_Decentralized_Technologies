@@ -1,7 +1,7 @@
 from KeyPair import KeyPair
 from Signature import Signature
 
-from cryptography.hazmat.primitives import hashes
+import hashlib
 
 
 class Account:
@@ -15,8 +15,7 @@ class Account:
         # Identity / Organization
         self.type = type
         # Identifier = SHA256 - hash
-        hashes.Hash(hashes.SHA256()).update(str.encode(str(self), 'utf-8'))
-        self.ID = hashes.Hash(hashes.SHA256()).finalize()
+        self.ID = hashlib.sha256(str(self).encode('utf-8')).hexdigest()
 
     def createOperation(self):
         pass
