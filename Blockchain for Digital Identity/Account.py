@@ -20,8 +20,9 @@ class Account:
     def createOperation(self):
         pass
 
-    def signData(self):
-        pass
+    def signData(self, message):
+        sign = Signature()
+        return sign.signData(self.key_pair.privateKey, message)
 
     def __str__(self):
         return self.name+self.type+str(self.key_pair.pubKStr)

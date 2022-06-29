@@ -14,6 +14,6 @@ from Account import *
 #sig.printSignature()
 
 firstOne = Identity("Tim")
-print(firstOne.toString())
-print(firstOne.name)
+#print(firstOne.toString())
+#print(firstOne.name)
 print(firstOne.ID)
