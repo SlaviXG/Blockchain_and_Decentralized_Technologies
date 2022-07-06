@@ -1,4 +1,4 @@
-from KeyPair import KeyPair
+from KeyPair import *
 
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding

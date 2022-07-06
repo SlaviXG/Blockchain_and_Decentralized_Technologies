@@ -1,6 +1,6 @@
-﻿from Signature import *
+﻿
+from Transaction import *
 
-from Account import *
 
 #x = KeyPair()
 #x.printKeyPair()
@@ -17,3 +17,5 @@ firstOne = Identity("Tim")
 #print(firstOne.toString())
 #print(firstOne.name)
 print(firstOne.ID)
+
+firstOne.createOperation
