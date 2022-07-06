@@ -1,6 +1,8 @@
 from Signature import *
 import hashlib
 
+from Operation import Operation
+
 
 class Account:
 
