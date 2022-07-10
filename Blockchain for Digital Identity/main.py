@@ -20,5 +20,7 @@ second = Identity("Jake")
 print(first.ID)
 
 first.personal_data["123"] = 0
-first.createOperation(second, "123")
+op = first.createOperation(second, "123")
 print(second.received_data)
+
+print(op.verifyOperation())

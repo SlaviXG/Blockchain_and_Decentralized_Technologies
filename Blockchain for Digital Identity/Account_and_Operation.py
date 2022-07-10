@@ -20,7 +20,7 @@ class Account:
         self.received_data = {}
 
     def createOperation(self, recipient, field: str):
-        sig = self.signData(field + str(self.personal_data[field]))
+        sig = self.signData(str(field) + str(self.personal_data[field]))
         operation = Operation(self, recipient, field, self.personal_data[field], sig)
         recipient.received_data[field] = self.personal_data[field]
         return operation
@@ -75,7 +75,7 @@ class Operation:
     def verifyOperation(self):
         if self.item[0] == '' or self.item[1] == '':
             return false
-        return true
+        return Signature.verifySignature(self.signature, self.signature, str(self.item[0]) + str(self.item[1]), self.sender.key_pair.publicKey)
 
     def __str__(self):
         return str(sender.ID) + "\n -> \n" + str(receiver.ID) + "\n" + field + " : " + value
