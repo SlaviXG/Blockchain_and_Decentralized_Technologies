@@ -13,9 +13,12 @@ from Transaction import *
 
 #sig.printSignature()
 
-firstOne = Identity("Tim")
+first = Identity("Tim")
+second = Identity("Jake")
 #print(firstOne.toString())
 #print(firstOne.name)
-print(firstOne.ID)
+print(first.ID)
 
-firstOne.createOperation
+first.personal_data["123"] = 0
+first.createOperation(second, "123")
+print(second.received_data)

@@ -10,6 +10,7 @@ class Signature:
         self.signature = None
 
     def signData(self, private_key, message):
+        message = message.encode('utf-8')
         self.signature = private_key.sign(
             message,
             padding.PSS(
@@ -21,6 +22,7 @@ class Signature:
         return self.signature
 
     def verifySignature(self, realSig, message, public_key):
+        message = message.encode('utf-8')
         try:
             public_key.verify(
                 realSig,
