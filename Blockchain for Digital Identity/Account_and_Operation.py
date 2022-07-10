@@ -1,7 +1,11 @@
 from Signature import *
 import hashlib
 
-
+'''
+Account class
+- stores and exchanges data 
+- signs and verifies data
+'''
 class Account:
 
     # Constructor
@@ -78,7 +82,7 @@ class Operation:
         return Signature.verifySignature(self.signature, self.signature, str(self.item[0]) + str(self.item[1]), self.sender.key_pair.publicKey)
 
     def __str__(self):
-        return str(sender.ID) + "\n -> \n" + str(receiver.ID) + "\n" + field + " : " + value
+        return str(sender.ID) + "\n -> \n" + str(receiver.ID) + "\n" + field + " : " + value + '\n'
 
     def print(self):
         print(str(self)) + "\n"

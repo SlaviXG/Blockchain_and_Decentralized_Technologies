@@ -4,6 +4,9 @@
     <list default="true" id="88ab2ae9-9bf4-4fed-bac5-d5a69b006d86" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Account_and_Operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Account_and_Operation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Transaction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keys/private_key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/keys/private_key.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keys/public_key.pem" beforeDir="false" afterPath="$PROJECT_DIR$/keys/public_key.pem" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
