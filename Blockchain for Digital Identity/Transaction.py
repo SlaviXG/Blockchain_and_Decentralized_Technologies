@@ -20,4 +20,4 @@ class Transaction:
         ops_str = ""
         for op in setOfOperations:
             self.ops_str += op
-        return "Nonce : " + str(self.nonce) + ops_str
+        return "Tx_ID: \n" + self.ID + "\nNonce : " + str(self.nonce) + '\n' + ops_str

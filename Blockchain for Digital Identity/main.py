@@ -1,5 +1,5 @@
-﻿
-from Transaction import *
+﻿from Blockchain import Blockchain
+from Blockchain import *
 
 
 #x = KeyPair()
@@ -13,14 +13,14 @@ from Transaction import *
 
 #sig.printSignature()
 
-first = Identity("Tim")
-second = Identity("Jake")
+#first = Identity("Tim")
+#second = Identity("Jake")
 #print(firstOne.toString())
 #print(firstOne.name)
 #print(first.ID)
 
-first.personal_data["123"] = 0
-op = first.createOperation(second, "123")
+#first.personal_data["123"] = 0
+#op = first.createOperation(second, "123")
 #print(second.received_data)
 
-print(op.verifyOperation())
+#print(op.verifyOperation())
