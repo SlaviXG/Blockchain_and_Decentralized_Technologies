@@ -12,12 +12,12 @@ class Transaction:
         self.nonce = nonce
         self.setOfOperations = setOfOperations
         ops_str = ""
-        for op in setOfOperations:
-            self.ops_str += op
+        for op in self.setOfOperations:
+            ops_str += str(op)
         self.ID = hashlib.sha256((ops_str + str(nonce)).encode('utf-8')).hexdigest()
 
     def __str__(self):
         ops_str = ""
-        for op in setOfOperations:
-            self.ops_str += op
-        return "Tx_ID: \n" + self.ID + "\nNonce : " + str(self.nonce) + '\n' + ops_str
+        for op in self.setOfOperations:
+            ops_str += str(op)
+        return "\tTx_ID: \n\t" + self.ID + "\n\tNonce : " + str(self.nonce) + "\n\tOperations:\n" + ops_str

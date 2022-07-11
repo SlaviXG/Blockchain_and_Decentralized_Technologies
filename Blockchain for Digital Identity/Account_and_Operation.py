@@ -70,7 +70,7 @@ boolean verifyOperation :
 
 
 class Operation:
-    def __init__(self, sender: Account, receiver, field: str, value: str, signature: Signature):
+    def __init__(self, sender, receiver, field: str, value: str, signature: Signature):
         self.sender = sender        # Account
         self.receiver = receiver    # Account
         self.item = (field, value)  # Item (key_in_dictionary, value)
@@ -82,7 +82,7 @@ class Operation:
         return Signature.verifySignature(self.signature, self.signature, str(self.item[0]) + str(self.item[1]), self.sender.key_pair.publicKey)
 
     def __str__(self):
-        return str(sender.ID) + "\n -> \n" + str(receiver.ID) + "\n" + field + " : " + value + '\n'
+        return "\t\t" + str(self.sender.ID) + "\n\t\t -> \n\t\t" + str(self.receiver.ID) + "\n\t\t" + str(self.item[0]) + " : " + str(self.item[1]) + '\n'
 
     def print(self):
         print(str(self)) + "\n"
