@@ -37,9 +37,26 @@ class Blockchain:
         # creating the first tx
         first_tx = Transaction([], 0)
         # creating genesis block
-        genesis = Block([first_tx], 0)
-        self.blockHistory = [genesis]
+        self.genesisBlock = Block([first_tx], 0)
+        self.blockHistory = [genesisBlock]
         self.txDatabase = [first_tx]
 
     def validateBlock(self, block: Block):
-        pass
+        # checking hash of previous block
+        if block.prevHash != self.blockHistory[-1].blockID:
+            return
+        # going through transactions in block
+        for tx in block.setOfTransactions:
+            # checking if the tx is already in history
+            if tx in self.txDatabase:
+                return
+            # going through exchange operations in the transaction
+            for op in tx.setOfOperations:
+                # operation verification
+                if not op.verifyOperation:
+                    return
+
+        # validation process
+        self.blockHistory.append(block)
+        for tx in block.setOfTransactions:
+            self.txDatabase.append(tx)
