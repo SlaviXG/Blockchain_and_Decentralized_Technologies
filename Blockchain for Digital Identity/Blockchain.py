@@ -2,6 +2,8 @@ from Transaction import *
 
 '''
 Block class
+- contains transactions
+- contains hash of prev block
 
 '''
 
@@ -27,7 +29,8 @@ class Block:
 
 '''
 Blockchain class
-
+- contains blocks
+- blocks can be validated and added to the history
 '''
 
 
