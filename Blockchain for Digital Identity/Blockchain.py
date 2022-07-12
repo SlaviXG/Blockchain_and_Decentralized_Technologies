@@ -38,7 +38,7 @@ class Blockchain:
         first_tx = Transaction([], 0)
         # creating genesis block
         self.genesisBlock = Block([first_tx], 0)
-        self.blockHistory = [genesisBlock]
+        self.blockHistory = [self.genesisBlock]
         self.txDatabase = [first_tx]
 
     def validateBlock(self, block: Block):
@@ -60,3 +60,10 @@ class Blockchain:
         self.blockHistory.append(block)
         for tx in block.setOfTransactions:
             self.txDatabase.append(tx)
+
+    def printBlockHistory(self):
+        print("---------------------------------------------------------------------------")
+        print("Block History.\n")
+        for block in self.blockHistory:
+            print(block)
+        print("---------------------------------------------------------------------------")

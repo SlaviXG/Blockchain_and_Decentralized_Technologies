@@ -13,17 +13,35 @@ from Blockchain import *
 
 #sig.printSignature()
 
-first = Identity("Tim")
-second = Identity("Jake")
+# first = Identity("Tim")
+# second = Identity("Jake")
 #print(firstOne.toString())
 #print(firstOne.name)
 #print(first.ID)
 
-first.personal_data["123"] = 0
-op = first.createOperation(second, "123")
+# first.personal_data["123"] = 0
+# op = first.createOperation(second, "123")
+# tx = Transaction([op])
+
 #print(second.received_data)
 
 #print(op.verifyOperation())
 
 blockchain = Blockchain()
-print(blockchain.blockHistory[0])
+blockchain.printBlockHistory()
+
+
+first = Identity("Tim")
+second = Identity("Jake")
+first.personal_data["123"] = 0
+op = first.createOperation(second, "123")
+tx = Transaction([op], 0)
+
+
+block = Block([tx], 0)
+blockchain.validateBlock(block)
+#blockchain.printBlockHistory()
+
+block = Block([tx], blockchain.blockHistory[0].blockID)
+blockchain.validateBlock(block)
+blockchain.printBlockHistory()
