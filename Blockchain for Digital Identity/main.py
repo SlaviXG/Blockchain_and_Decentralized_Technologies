@@ -45,3 +45,6 @@ blockchain.validateBlock(block)
 block = Block([tx], blockchain.blockHistory[0].blockID)
 blockchain.validateBlock(block)
 blockchain.printBlockHistory()
+
+#first.printInfo()
+#first.printData()

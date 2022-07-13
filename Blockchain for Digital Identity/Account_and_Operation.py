@@ -34,11 +34,28 @@ class Account:
         return sign.signData(self.key_pair.privateKey, message)
 
     def __str__(self):
-        return self.name + self.type + str(self.key_pair.pubKStr)
+        return str(self.name) + self.type + str(self.key_pair.pubKStr)
 
-    # returns the string with the account object
-    def toString(self):
-        return str(self)
+    def printInfo(self):
+        print("Account Name: " + str(self.name) + '\n' + \
+               "ID: " + str(self.ID) + '\n' + \
+               "Account Type:" + str(self.type) + '\n' + \
+               str(self.key_pair.pubKStr) + '\n')
+
+    def printData(self):
+        print("Personal Data :")
+        if len(self.personal_data.items()):
+            for key, value in self.personal_data.items():
+                print('\t' + str(key) + " : " + str(value))
+        else:
+            print("\tNone")
+
+        print("Received Data :")
+        if len(self.received_data.items()):
+            for key, value in self.received_data.items():
+                print('\t' + str(key) + " : " + str(value))
+        else:
+            print("\tNone")
 
     # Prints the Key Pair
     def printKeyPair(self):
