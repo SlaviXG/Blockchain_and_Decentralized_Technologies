@@ -1,3 +1,0 @@
-M:/Programs/GitHub Rep/Blockchain-and-Decentralized-Technologies/Practice 3/cmake-build-debug/CMakeFiles/Practice_3.dir
-M:/Programs/GitHub Rep/Blockchain-and-Decentralized-Technologies/Practice 3/cmake-build-debug/CMakeFiles/edit_cache.dir
-M:/Programs/GitHub Rep/Blockchain-and-Decentralized-Technologies/Practice 3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
