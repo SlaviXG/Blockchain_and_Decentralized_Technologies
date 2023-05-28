@@ -1,0 +1,94 @@
+{
+  "validations": {
+    "field-error_required": "Please fill out this field",
+    "field-error_url": "Field must be a valid URL",
+    "field-error_email": "Field must be a valid email"
+  },
+  "errors": {
+    "default": "Oops... Something went wrong",
+    "provider-user-rejected-request": "User rejected request.",
+    "provider-unauthorized": "The requested method and/or account has not been authorized by the user.",
+    "provider-unsupported-method": "The Provider does not support the requested method.",
+    "provider-disconnected": "The Provider is disconnected from all chains.",
+    "provider-chain-disconnected": "The Provider is not connected to the requested chain.",
+    "provider-parse-error": "Invalid JSON standard",
+    "provider-invalid-request": "JSON is not a valid request object standard",
+    "provider-method-not-found": "Method does not exist standard",
+    "provider-invalid-params": "Invalid method parameters standard",
+    "provider-internal-error": "Internal JSON-RPC error standard",
+    "provider-invalid-input": "Missing or invalid parameters non-standard",
+    "provider-resource-not-found": "Requested resource not found non-standard",
+    "provider-resource-unavailable": "Requested resource not available non-standard",
+    "provider-transaction-rejected": "Transaction creation failed non-standard",
+    "provider-method-not-supported": "Method is not implemented non-standard",
+    "provider-reject-request": "You reject transaction",
+    "provider-limit-exceeded": "Request exceeds defined limit non-standard",
+    "provider-json-rpc-version-not-supported": "Version of JSON-RPC protocol is not supported non-standard",
+    "provider-wrapper-method-not-found": "provider not exist or hasn't this method",
+    "provider-failed-estimate-gas": "The request can't estimate gas. Please try again later!"
+  },
+  "notification": {
+    "default-title-success": "Success",
+    "default-title-error": "Error",
+    "default-title-warning": "Warning",
+    "default-title-info": "Info",
+    "default-title-default": "Just a message",
+    "default-message-success": "Action successful",
+    "default-message-error": "Something went wrong",
+    "default-message-warning": "Something you are doing is not recommended",
+    "default-message-info": "Something is happening. Just want you to know that",
+    "default-message-default": "Just a message"
+  },
+  "connect-page": {
+    "loading-error-msg": "Oops... Something went wrong",
+    "title": "Laboratory work",
+    "subtitle": "This is a lab work, the main objective of which is to show by example how to deploy solidity smart contracts and work with a locally running frontend",
+    "connect-modal-title": "Connect to MetaMask",
+    "connect-modal-subtitle": "Connect to MetaMask to start your work",
+    "connect-btn": "Connect to MetaMask",
+    "install-metamask-btn": "Install MetaMask",
+    "switch-network-btn": "Switch Network",
+    "mint-lbl": "Mint"
+  },
+  "nfts-page": {
+    "loading-error-msg": "Oops, something went wrong",
+    "no-data-msg": "Empty data, please add new"
+  },
+  "nfts-page-actions": {
+    "search-placeholder": "Search by address",
+    "search-btn": "Search",
+    "mint-btn": "Mint"
+  },
+  "nfts-page-mint-modal": {
+    "mint-title": "Mint NFT",
+    "success-mint": "You success mint NFT",
+    "nft-name-placeholder": "Enter the name of NFT",
+    "nft-name-title": "NFT name",
+    "nft-link-placeholder": "Enter the link to NFT image",
+    "nft-link-title": "NFT link",
+    "loading-msg-btn": "Loading...",
+    "loading-msg": "Please wait for the successful completion of the transaction",
+    "mint-btn": "Mint"
+  },
+  "nft-details-page": {
+    "back-btn": "Back to main page",
+    "loading-error-msg": "Oops, something went wrong",
+    "no-data-msg": "Empty data"
+  },
+  "nft-details-page-transfer-modal": {
+    "transfer-title": "Transfer NFT",
+    "transfer-error": "Can't transfer NFT",
+    "address-placeholder": "Enter user address for transfer",
+    "address-title": "User address",
+    "success-transfer": "You success transfer NFT",
+    "loading-msg-btn": "Loading...",
+    "loading-msg": "Please wait for the successful completion of the transaction",
+    "transfer-btn": "Transfer"
+  },
+  "nft-details-page-description": {
+    "token-id": "Token id",
+    "contract-address": "Contract address",
+    "owner": "Owner",
+    "transfer-btn": "Transfer"
+  }
+}
