@@ -3,7 +3,10 @@ pragma solidity ^0.8.19;
 
 import "./token/ABaseNFT.sol";
 
+// Implemented SBT 
 contract SimpleNFT is ABaseNFT {
+    mapping(uint256 => address) private soulboundTokens;
+
     constructor(string memory name, string memory symbol) ABaseNFT(name, symbol) {}
 
     function mintTo(
@@ -27,6 +30,10 @@ contract SimpleNFT is ABaseNFT {
         return tokens;
     }
 
+    function getSoulboundTokenOwner(uint256 tokenId) external view returns (address) {
+        return soulboundTokens[tokenId];
+    }
+
     function _beforeTokenTransfer(
         address from,
         address to,
@@ -35,7 +42,26 @@ contract SimpleNFT is ABaseNFT {
     ) internal override(ABaseNFT) {
         super._beforeTokenTransfer(from, to, tokenId, batchSize);
 
-        // TODO: your code goes here
+        if (from != address(0) && to != address(0) && from != to) {
 
+            _soulbind(tokenId, from, to);
+        }
+    }
+
+    function _soulbind(
+        uint256 tokenId,
+        address from,
+        address to
+    ) internal {
+        
+        require(!_isSoulbound(tokenId), "SimpleNFT: token is already soulbound");
+        require(ownerOf(tokenId) == from, "SimpleNFT: token not owned by sender");
+
+        soulboundTokens[tokenId] = to;
+    }
+
+    function _isSoulbound(uint256 tokenId) internal view returns (bool) {
+        
+        return soulboundTokens[tokenId] != address(0);
     }
 }
