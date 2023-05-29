@@ -94,7 +94,7 @@ After completing steps above, I located to the code editor and executed the foll
 4. After making required changes to make the contract an SBT, the application started working the following way: 
     - First of all we can Mint our NFT (as the organization, that was mentioned in the lecture)
     - After this we can transfer it to the person we'd like to soulbind the token to.
-    - After the transaction is completed (and the token is soulbound), the transfer function on the front end throws an error. 
+    - After the transaction is completed (and the token is soulbound), the transfer function on the front end throws an error if we are trying to transfer the token to a different address than owner's. 
 
 5. Additionally, I've done an optional task by taking the address of the contract my friend and followed the steps 7-9 in the _Preparation part_. It allowed seeing the NFTs my friend has minted.
 
