@@ -5,7 +5,6 @@ import "./token/ABaseNFT.sol";
 
 // Implemented SBT 
 contract SimpleNFT is ABaseNFT {
-    mapping(uint256 => address) private soulboundTokens;
 
     constructor(string memory name, string memory symbol) ABaseNFT(name, symbol) {}
 
@@ -16,7 +15,6 @@ contract SimpleNFT is ABaseNFT {
     ) external override onlyOwner {
         _mint(receiver, tokenId);
         _setTokenURI(tokenId, tokenURI);
-        _soulbind(tokenId, receiver);
     }
 
     function getUserTokens(address user) external view returns (uint256[] memory) {
@@ -31,10 +29,6 @@ contract SimpleNFT is ABaseNFT {
         return tokens;
     }
 
-    function getSoulboundTokenOwner(uint256 tokenId) external view returns (address) {
-        return soulboundTokens[tokenId];
-    }
-
     function _beforeTokenTransfer(
         address from,
         address to,
@@ -43,19 +37,6 @@ contract SimpleNFT is ABaseNFT {
     ) internal override(ABaseNFT) {
         super._beforeTokenTransfer(from, to, tokenId, batchSize);
 
-        require(!_isSoulbound(tokenId), "SimpleNFT: token is soulbound");
-    }
-
-    function _soulbind(
-        uint256 tokenId,
-        address to
-    ) internal {
-    
-        soulboundTokens[tokenId] = to;
-    }
-
-    function _isSoulbound(uint256 tokenId) internal view returns (bool) {
-        
-        return soulboundTokens[tokenId] != address(0);
+        require(from == address(0), "SimpleNFT: token is soulbound");
     }
 }
