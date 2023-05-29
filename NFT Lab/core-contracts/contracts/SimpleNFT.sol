@@ -16,6 +16,7 @@ contract SimpleNFT is ABaseNFT {
     ) external override onlyOwner {
         _mint(receiver, tokenId);
         _setTokenURI(tokenId, tokenURI);
+        _soulbind(tokenId, receiver);
     }
 
     function getUserTokens(address user) external view returns (uint256[] memory) {
@@ -42,21 +43,14 @@ contract SimpleNFT is ABaseNFT {
     ) internal override(ABaseNFT) {
         super._beforeTokenTransfer(from, to, tokenId, batchSize);
 
-        if (from != address(0) && to != address(0) && from != to) {
-
-            _soulbind(tokenId, from, to);
-        }
+        require(!_isSoulbound(tokenId), "SimpleNFT: token is soulbound");
     }
 
     function _soulbind(
         uint256 tokenId,
-        address from,
         address to
     ) internal {
-        
-        require(!_isSoulbound(tokenId), "SimpleNFT: token is already soulbound");
-        require(ownerOf(tokenId) == from, "SimpleNFT: token not owned by sender");
-
+    
         soulboundTokens[tokenId] = to;
     }
 
