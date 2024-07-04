@@ -1,3 +1,6 @@
+
+![github_logo_png](https://github.com/SlaviXG/Blockchain_and_Decentralized_Technologies/assets/78792148/b02e4ab0-a6c5-4586-98ae-dfc0996f8b2d)
+
 # NFT-Lab
 
 Here are the steps that I followed in order to complete this laboratory work.
